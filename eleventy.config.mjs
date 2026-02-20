@@ -7,9 +7,9 @@ export default function (eleventyConfig) {
     extname: ".liquid",
   });
 
-  // Blog collection (posts in blog/posts/)
+  // Blog collection (posts in _posts/)
   eleventyConfig.addCollection("blog", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("blog/posts/*.md").sort((a, b) => b.data.date - a.data.date);
+    return collectionApi.getFilteredByGlob("**/_posts/*.md").sort((a, b) => b.data.date - a.data.date);
   });
 
   // Passthrough copy for assets (input -> output mapping)
