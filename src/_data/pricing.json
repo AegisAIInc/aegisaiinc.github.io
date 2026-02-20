@@ -1,0 +1,72 @@
+[
+  {
+    "id": "free",
+    "name": "Free",
+    "subname": "Basic",
+    "price_monthly": 0,
+    "price_yearly": 0,
+    "price_display": "Free",
+    "price_period": "",
+    "description": "Core monitoring with limited heuristics. Ideal for trying AegisAI.",
+    "target": "Individuals & small setups",
+    "features": [
+      "Core behavioral monitoring",
+      "Limited heuristic library",
+      "Up to 3 devices",
+      "7-day data retention",
+      "Community support"
+    ],
+    "cta_text": "Sign Up Free",
+    "cta_url": "/contact/#trial",
+    "cta_style": "outline",
+    "highlighted": false
+  },
+  {
+    "id": "pro",
+    "name": "Pro",
+    "subname": "",
+    "price_monthly": 9.99,
+    "price_yearly": 99,
+    "price_display_monthly": "$9.99",
+    "price_display_yearly": "$99",
+    "price_period": "/device",
+    "description": "Full auto-updates, custom whitelists, and basic support for home users and SMBs.",
+    "target": "Home users & SMBs",
+    "features": [
+      "Full automatic heuristic updates",
+      "Custom whitelists",
+      "Unlimited devices",
+      "30-day data retention",
+      "Basic support (email)"
+    ],
+    "cta_text": "Buy Pro",
+    "cta_url": "/contact/?plan=pro",
+    "cta_style": "primary",
+    "highlighted": true
+  },
+  {
+    "id": "enterprise",
+    "name": "Enterprise",
+    "subname": "",
+    "price_monthly_min": 500,
+    "price_monthly_max": 5000,
+    "price_display": "$500–5,000",
+    "price_period": "/mo (by seats)",
+    "description": "Scalable for servers and cloud. Advanced simulations, API access, dedicated support.",
+    "target": "Servers, cloud, large orgs",
+    "features": [
+      "Scalable server & cloud deployment",
+      "Advanced threat simulations",
+      "Full API access",
+      "Dedicated support (24/7)",
+      "Custom SLAs"
+    ],
+    "addons": [
+      "Threat reports: $1,000–10,000 (one-time)"
+    ],
+    "cta_text": "Contact Sales",
+    "cta_url": "/contact/",
+    "cta_style": "outline",
+    "highlighted": false
+  }
+]

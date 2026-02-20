@@ -1,0 +1,39 @@
+{% comment %}
+  Reusable pricing card partial.
+  Expects: tier (object with name, price_monthly, features, cta_text, cta_url, etc.)
+  Optional: billing_period ("monthly" | "yearly") for Pro tier price display
+{% endcomment %}
+<div id="{{ tier.id }}" class="rounded-xl border bg-dark-800/50 p-6 flex flex-col h-full {% if tier.highlighted %}border-2 border-aegis-500 bg-dark-700/80 relative{% else %}border-dark-600{% endif %} scroll-mt-24">
+  {% if tier.highlighted %}
+  <div class="absolute -top-3 left-6 px-2 py-0.5 bg-aegis-500 text-white text-xs font-medium rounded">Popular</div>
+  {% endif %}
+  <h3 class="text-lg font-semibold text-white mb-1">{{ tier.name }}{% if tier.subname %} <span class="text-gray-400">({{ tier.subname }})</span>{% endif %}</h3>
+  {% if tier.target %}
+  <p class="text-gray-500 text-sm mb-4">{{ tier.target }}</p>
+  {% endif %}
+  <div class="mb-6">
+    {% if tier.id == "enterprise" %}
+      <span class="text-3xl font-bold text-white">{{ tier.price_display }}</span>
+      <span class="text-gray-400">{{ tier.price_period }}</span>
+    {% elsif tier.id == "free" %}
+      <span class="text-3xl font-bold text-white">Free</span>
+    {% else %}
+      <span class="text-3xl font-bold text-white" data-price-monthly="${{ tier.price_monthly }}" data-price-yearly="${{ tier.price_yearly }}">{{ tier.price_display_monthly }}</span>
+      <span class="text-gray-400">{{ tier.price_period }}/<span class="pricing-period-label">mo</span></span>
+    {% endif %}
+  </div>
+  <p class="text-gray-400 text-sm mb-6">{{ tier.description }}</p>
+  <ul class="space-y-3 text-sm text-gray-400 mb-6 flex-1">
+    {% for feature in tier.features %}
+    <li class="flex items-center gap-2"><span class="text-aegis-500">✓</span> {{ feature }}</li>
+    {% endfor %}
+    {% if tier.addons %}
+    {% for addon in tier.addons %}
+    <li class="flex items-center gap-2 text-aegis-400"><span class="text-amber-400">+</span> {{ addon }}</li>
+    {% endfor %}
+    {% endif %}
+  </ul>
+  <a href="{{ tier.cta_url }}" {% if tier.cta_style == 'primary' %}class="block w-full text-center py-3 rounded-lg bg-gradient-to-r from-aegis-500 to-aegis-600 text-white font-medium hover:from-aegis-600 hover:to-aegis-700 transition-all"{% else %}class="block w-full text-center py-3 rounded-lg border border-aegis-500 text-aegis-400 font-medium hover:bg-aegis-500/10 transition-colors"{% endif %}>
+    {{ tier.cta_text }}
+  </a>
+</div>
