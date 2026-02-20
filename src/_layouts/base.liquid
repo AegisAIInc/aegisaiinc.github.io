@@ -1,24 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="dark" id="html-theme">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="{% if meta_description %}{{ meta_description }}{% else %}AegisAI: Shield Against Rogue AI. Self-evolving defensive software that detects and counters self-replicating AI agents in real-time.{% endif %}">
-  <meta name="keywords" content="AegisAI, rogue AI, AI security, AI defense, cybersecurity, AI threat detection">
-  <meta property="og:title" content="{% if title %}{{ title }} | AegisAI{% else %}AegisAI: Shield Against Rogue AI{% endif %}">
-  <meta property="og:description" content="{% if meta_description %}{{ meta_description }}{% else %}Self-evolving guardian against rogue AI threats.{% endif %}">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="AegisAI">
+  <meta name="theme-color" content="#0a0e17">
+  <link rel="canonical" href="{{ siteUrl }}{{ page.url }}">
+  <meta name="description" content="{% if meta_description %}{{ meta_description }}{% else %}AegisAI: Shield Against Rogue AI. Self-evolving software for rogue AI detection, self-replicating AI containment, and AI cybersecurity defense.{% endif %}">
+  <meta name="keywords" content="AegisAI, rogue AI, self-replicating AI, AI cybersecurity, AI containment, AI threat detection, AI defense, AI security">
+  <meta property="og:title" content="{{ title | default: 'AegisAI' }} | AegisAI: Shield Against Rogue AI">
+  <meta property="og:description" content="{% if meta_description %}{{ meta_description }}{% else %}Self-evolving guardian against rogue AI threats. AI cybersecurity for self-replicating AI containment.{% endif %}">
   <meta property="og:type" content="website">
-  <title>{% if title %}{{ title }} | AegisAI{% else %}AegisAI: Shield Against Rogue AI{% endif %}</title>
+  <meta property="og:url" content="{{ siteUrl }}{{ page.url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@aegisai">
+  <title>{% if title and title != "AegisAI" %}{{ title }} | {% endif %}AegisAI: Shield Against Rogue AI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body class="bg-dark-900 text-gray-100 font-sans antialiased min-h-screen flex flex-col">
+<body class="bg-dark-900 text-gray-100 font-sans antialiased min-h-screen flex flex-col theme-body">
   {% include 'header' %}
   <main class="flex-1">
     {{ content }}
   </main>
   {% include 'footer' %}
+  {% include 'sticky-cta' %}
+  {% include 'theme-toggle' %}
+  {% include 'analytics' %}
+  <script>
+    (function(){var h=document.documentElement,s=localStorage.getItem('aegis-theme');if(s==='light')h.classList.remove('dark'),h.classList.add('light');else h.classList.add('dark'),h.classList.remove('light');})();
+  </script>
 </body>
 </html>

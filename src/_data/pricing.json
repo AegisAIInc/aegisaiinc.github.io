@@ -24,7 +24,7 @@
   {
     "id": "pro",
     "name": "Pro",
-    "subname": "",
+    "subname": "Recommended",
     "price_monthly": 9.99,
     "price_yearly": 99,
     "price_display_monthly": "$9.99",
@@ -47,7 +47,7 @@
   {
     "id": "enterprise",
     "name": "Enterprise",
-    "subname": "",
+    "subname": "Custom",
     "price_monthly_min": 500,
     "price_monthly_max": 5000,
     "price_display": "$500–5,000",

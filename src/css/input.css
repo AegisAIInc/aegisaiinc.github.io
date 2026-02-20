@@ -9,6 +9,19 @@
   body {
     @apply bg-dark-900 text-gray-100;
   }
+  html.light body,
+  html.light .bg-dark-900 { background-color: #f9fafb; }
+  html.light .text-gray-100,
+  html.light body { color: #111827; }
+  html.light .bg-dark-800 { background-color: #ffffff; }
+  html.light .bg-dark-700,
+  html.light .bg-dark-700\/50 { background-color: #f3f4f6; }
+  html.light .border-dark-600,
+  html.light .border-dark-500 { border-color: #e5e7eb; }
+  html.light .text-white { color: #111827; }
+  html.light .text-gray-400 { color: #4b5563; }
+  html.light .text-gray-500 { color: #6b7280; }
+  html.light .bg-dark-900\/95 { background-color: rgba(249,250,251,0.95); }
 }
 
 @layer components {

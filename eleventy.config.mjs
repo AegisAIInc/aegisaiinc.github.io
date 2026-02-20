@@ -1,5 +1,20 @@
+import htmlMinifier from "html-minifier-terser";
+
 export default function (eleventyConfig) {
   eleventyConfig.addGlobalData("currentYear", () => new Date().getFullYear());
+  eleventyConfig.addGlobalData("siteUrl", "https://aegisai.io");
+
+  eleventyConfig.addTransform("htmlmin", async (content, outputPath) => {
+    if (outputPath?.endsWith(".html")) {
+      return await htmlMinifier.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+        minifyJS: false,
+      });
+    }
+    return content;
+  });
 
   // Liquid as the sole template engine
   eleventyConfig.setTemplateFormats(["liquid", "md"]);
