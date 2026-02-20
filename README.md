@@ -55,8 +55,18 @@ src/
 | `npm run css:build` | Compile Tailwind CSS only |
 | `npm run css:watch` | Watch and recompile Tailwind on changes |
 
+## GitHub Pages Deployment
+
+A workflow at `.github/workflows/deploy.yml` deploys the site on push to `main`:
+
+1. In your GitHub repo: **Settings → Pages → Build and deployment**: Source = **GitHub Actions**
+2. Push to `main` to trigger deployment
+3. Site will be at `https://<user>.github.io/<repo>/`
+
+For user/org sites (`username.github.io`), edit the workflow and set `ELEVENTY_PATH_PREFIX: /`
+
 ## Configuration
 
-- **eleventy.config.mjs** — `htmlTemplateEngine: "liquid"`, `markdownTemplateEngine: "liquid"`
+- **eleventy.config.mjs** — `htmlTemplateEngine: "liquid"`, `markdownTemplateEngine: "liquid"`, `pathPrefix` for GitHub Pages
 - **tailwind.config.js** — Custom AegisAI theme (blue/dark, aegis color palette)
 - **postcss.config.js** — Tailwind + Autoprefixer
