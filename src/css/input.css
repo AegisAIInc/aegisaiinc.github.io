@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-dark-900 text-gray-100;
+  }
+}
+
+@layer components {
+  /* Shield-inspired decorative element */
+  .shield-accent {
+    background: linear-gradient(135deg, rgba(26, 134, 245, 0.1) 0%, transparent 50%);
+  }
+}

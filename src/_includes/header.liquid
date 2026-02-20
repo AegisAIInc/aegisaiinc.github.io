@@ -1,0 +1,31 @@
+<header class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-md border-b border-dark-600">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+    <div class="flex justify-between items-center h-16 lg:h-20">
+      <a href="/" class="flex items-center gap-2 group">
+        <span class="text-2xl font-bold bg-gradient-to-r from-aegis-400 to-aegis-600 bg-clip-text text-transparent">
+          Aegis<span class="font-mono text-aegis-500">AI</span>
+        </span>
+      </a>
+
+      <button type="button" class="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-dark-600" aria-label="Open menu" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <div id="mobile-menu" class="hidden lg:flex lg:items-center lg:gap-8 absolute lg:static top-16 left-0 right-0 bg-dark-900 lg:bg-transparent border-b lg:border-0 border-dark-600 lg:flex">
+        <div class="flex flex-col lg:flex-row lg:items-center lg:gap-8 px-4 py-4 lg:py-0">
+          <a href="/" class="py-2 text-gray-300 hover:text-aegis-400 transition-colors{% if page.url == '/' %} text-aegis-400 font-medium{% endif %}">Home</a>
+          <a href="/features/" class="py-2 text-gray-300 hover:text-aegis-400 transition-colors{% if page.url == '/features/' %} text-aegis-400 font-medium{% endif %}">Features</a>
+          <a href="/pricing/" class="py-2 text-gray-300 hover:text-aegis-400 transition-colors{% if page.url == '/pricing/' %} text-aegis-400 font-medium{% endif %}">Pricing</a>
+          <a href="/about/" class="py-2 text-gray-300 hover:text-aegis-400 transition-colors{% if page.url == '/about/' %} text-aegis-400 font-medium{% endif %}">About</a>
+          <a href="/blog/" class="py-2 text-gray-300 hover:text-aegis-400 transition-colors{% if page.url contains '/blog' %} text-aegis-400 font-medium{% endif %}">Blog</a>
+          <a href="/contact/" class="py-2 text-gray-300 hover:text-aegis-400 transition-colors{% if page.url == '/contact/' %} text-aegis-400 font-medium{% endif %}">Contact</a>
+          <a href="/contact/#trial" class="inline-flex items-center justify-center mt-2 lg:mt-0 px-6 py-2.5 bg-gradient-to-r from-aegis-500 to-aegis-600 text-white font-semibold rounded-lg hover:from-aegis-600 hover:to-aegis-700 transition-all shadow-lg shadow-aegis-500/25 hover:shadow-aegis-500/40 animate-glow">
+            Start Free Trial
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
