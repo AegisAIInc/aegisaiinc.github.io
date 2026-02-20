@@ -1,0 +1,7 @@
+{
+  "team": [
+    { "name": "Dr. Sarah Chen", "role": "CEO & Co-Founder", "bio": "Former AI safety researcher. 15 years in ML and cybersecurity.", "placeholder": true },
+    { "name": "Marcus Reeves", "role": "CTO & Co-Founder", "bio": "Ex-cloud security architect. Led detection teams at Fortune 500.", "placeholder": true },
+    { "name": "Elena Vasquez", "role": "Head of Research", "bio": "PhD in adversarial ML. Published on rogue AI mitigation.", "placeholder": true }
+  ]
+}
