@@ -2,61 +2,149 @@
 layout: base
 title: Contact
 permalink: /contact/
-meta_description: "Contact AegisAI for a free trial, sales inquiry, or support. Get in touch with our team to learn how we can protect your systems from rogue AI threats."
+meta_description: "Contact AegisAI for support, demos, or general inquiries. Based in Orlando, Florida. Get in touch for free trials and AI defense solutions."
 ---
 
 <section class="py-16 lg:py-24">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-2xl mx-auto">
-      <div class="text-center mb-12">
-        <h1 class="text-4xl lg:text-5xl font-bold text-white mb-4">Contact AegisAI</h1>
-        <p class="text-xl text-gray-400">Get in touch for a free trial or to learn more about protecting your infrastructure</p>
-      </div>
-
-      <div class="bg-dark-800/50 rounded-xl border border-dark-600 p-8 lg:p-10 mb-12">
-        <form action="#" method="post" class="space-y-6">
-          <div class="grid sm:grid-cols-2 gap-6">
-            <div>
-              <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
-              <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-aegis-500 focus:border-transparent" placeholder="Jane Smith">
-            </div>
-            <div>
-              <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
-              <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-aegis-500 focus:border-transparent" placeholder="jane@company.com">
-            </div>
-          </div>
-          <div>
-            <label for="company" class="block text-sm font-medium text-gray-300 mb-2">Company (optional)</label>
-            <input type="text" id="company" name="company" class="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-aegis-500 focus:border-transparent" placeholder="Acme Inc.">
-          </div>
-          <div>
-            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
-            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-aegis-500 focus:border-transparent resize-none" placeholder="Tell us about your security needs..."></textarea>
-          </div>
-          <button type="submit" class="w-full py-4 bg-gradient-to-r from-aegis-500 to-aegis-600 text-white font-semibold rounded-lg hover:from-aegis-600 hover:to-aegis-700 transition-all">
-            Send Message
-          </button>
-        </form>
-      </div>
-
-      <div id="trial" class="scroll-mt-24 bg-shield-gradient rounded-xl border border-aegis-500/30 p-8 text-center">
-        <h2 class="text-2xl font-bold text-white mb-2">Start Your Free Trial</h2>
-        <p class="text-gray-400 mb-6">14 days. No credit card required. Full access to AegisAI protection.</p>
-        <a href="#" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-aegis-500 to-aegis-600 text-white font-semibold rounded-lg hover:from-aegis-600 hover:to-aegis-700 transition-all">
-          Start Free Trial
-        </a>
-      </div>
-
-      <div class="mt-12 flex flex-col sm:flex-row justify-center gap-8 text-gray-400 text-sm">
-        <div class="flex items-center gap-2">
-          <svg class="w-5 h-5 text-aegis-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-          <span>contact@aegisai.io</span>
+    <div class="grid lg:grid-cols-3 gap-12 lg:gap-16">
+      {% comment %} Main form {% endcomment %}
+      <div class="lg:col-span-2">
+        <div class="text-center lg:text-left mb-8">
+          <h1 class="text-4xl lg:text-5xl font-bold text-white mb-4">Contact AegisAI</h1>
+          <p class="text-xl text-gray-400">Get support, request a demo, or reach out with questions about protecting your infrastructure from rogue AI.</p>
         </div>
-        <div class="flex items-center gap-2">
-          <svg class="w-5 h-5 text-aegis-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-          <span>24/7 Support</span>
+
+        <div class="bg-dark-800/50 rounded-xl border border-dark-600 p-8 lg:p-10">
+          <form action="https://formsubmit.co/contact@aegisai.com" method="post" class="space-y-6" id="contact-form">
+            <input type="hidden" name="_subject" value="AegisAI Contact Form - New Submission">
+            <input type="hidden" name="_next" value="https://aegisai.io/contact/?submitted=1">
+            <input type="hidden" name="_template" value="box">
+            <input type="text" name="_honey" style="display:none">
+
+            <div class="flex flex-wrap gap-4">
+              <button type="button" onclick="setInquiry('support')" class="cta-btn px-6 py-3 rounded-lg border border-dark-600 text-gray-400 font-medium transition-colors hover:text-white hover:border-aegis-500/50" data-inquiry="support">
+                Get Support
+              </button>
+              <button type="button" onclick="setInquiry('demo')" class="cta-btn px-6 py-3 rounded-lg border border-dark-600 text-gray-400 font-medium transition-colors hover:text-white hover:border-aegis-500/50" data-inquiry="demo">
+                Request Demo
+              </button>
+            </div>
+
+            <input type="hidden" name="inquiry_type" id="inquiry_type" value="general">
+
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name *</label>
+                <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-aegis-500 focus:border-transparent" placeholder="Jane Smith">
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email *</label>
+                <input type="email" id="email" name="_replyto" required class="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-aegis-500 focus:border-transparent" placeholder="jane@company.com">
+              </div>
+            </div>
+
+            <div>
+              <label for="segment" class="block text-sm font-medium text-gray-300 mb-2">Segment</label>
+              <select id="segment" name="segment" class="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-lg text-white focus:ring-2 focus:ring-aegis-500 focus:border-transparent">
+                <option value="">Select your segment</option>
+                <option value="Consumer">Consumer</option>
+                <option value="SMB">SMB</option>
+                <option value="Enterprise">Enterprise</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message *</label>
+              <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-aegis-500 focus:border-transparent resize-none" placeholder="Tell us about your security needs, support question, or demo request..."></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-4 bg-gradient-to-r from-aegis-500 to-aegis-600 text-white font-semibold rounded-lg hover:from-aegis-600 hover:to-aegis-700 transition-all">
+              Send Message
+            </button>
+          </form>
         </div>
       </div>
+
+      {% comment %} Sidebar: Support, Community, Location {% endcomment %}
+      <aside class="space-y-8">
+        <div class="p-6 rounded-xl bg-dark-700/50 border border-dark-600">
+          <h3 class="text-lg font-semibold text-white mb-4">Support Options</h3>
+          <ul class="space-y-3 text-gray-400 text-sm">
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-aegis-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+              <span>Live chat (Pro & Enterprise)</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-aegis-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+              <span>Support tickets via email</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-xl bg-dark-700/50 border border-dark-600">
+          <h3 class="text-lg font-semibold text-white mb-4">Community</h3>
+          <ul class="space-y-3 text-sm">
+            <li>
+              <a href="https://x.com/aegisai" target="_blank" rel="noopener noreferrer" class="text-aegis-400 hover:text-aegis-300 transition-colors flex items-center gap-2">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                @aegisai
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-aegis-400 hover:text-aegis-300 transition-colors flex items-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                Community forums (coming soon)
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-xl bg-dark-700/50 border border-dark-600">
+          <h3 class="text-lg font-semibold text-white mb-4">Location</h3>
+          <div class="flex items-start gap-2 text-gray-400 text-sm">
+            <svg class="w-5 h-5 text-aegis-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <div>
+              <p class="text-white font-medium">Orlando, Florida</p>
+              <p class="text-gray-500 mt-1">AegisAI headquarters</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    {% comment %} Free Trial CTA {% endcomment %}
+    <div id="trial" class="scroll-mt-24 mt-16 bg-shield-gradient rounded-xl border border-aegis-500/30 p-8 text-center">
+      <h2 class="text-2xl font-bold text-white mb-2">Start Your Free Trial</h2>
+      <p class="text-gray-400 mb-6">14 days. No credit card required. Full access to AegisAI protection.</p>
+      <a href="/pricing/" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-aegis-500 to-aegis-600 text-white font-semibold rounded-lg hover:from-aegis-600 hover:to-aegis-700 transition-all">
+        Start Free Trial
+      </a>
     </div>
   </div>
 </section>
+
+<script>
+(function() {
+  const form = document.getElementById('contact-form');
+  const inquiryInput = document.getElementById('inquiry_type');
+  const ctaBtns = document.querySelectorAll('.cta-btn');
+
+  window.setInquiry = function(type) {
+    inquiryInput.value = type;
+    ctaBtns.forEach(btn => {
+      const isActive = btn.dataset.inquiry === type;
+      btn.classList.toggle('bg-aegis-600', isActive);
+      btn.classList.toggle('text-white', isActive);
+      btn.classList.toggle('border-aegis-500', isActive);
+      btn.classList.toggle('border-dark-600', !isActive);
+      btn.classList.toggle('text-gray-400', !isActive);
+    });
+  };
+
+  ctaBtns.forEach(btn => btn.addEventListener('click', function() {
+    setInquiry(this.dataset.inquiry);
+    form.scrollIntoView({ behavior: 'smooth' });
+  }));
+})();
+</script>
