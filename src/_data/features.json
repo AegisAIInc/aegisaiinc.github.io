@@ -1,0 +1,37 @@
+[
+  {
+    "id": "detection-engine",
+    "title": "Detection Engine",
+    "description": "Behavioral analysis powered by ML models including Isolation Forests for anomaly detection. Think of it like a next-gen IDS—similar in concept to Snort or Suricata for traditional networks, but built specifically for AI behavior. We analyze process trees, API call patterns, and resource consumption to flag rogue propagation before it spreads.",
+    "cta_url": "/contact/",
+    "cta_text": "See It in Action"
+  },
+  {
+    "id": "threat-intelligence",
+    "title": "Threat Intelligence Database",
+    "description": "Vector databases enable semantic search across threat signatures—finding similar attack patterns even when exact matches don't exist. Federated learning lets organizations contribute to a shared threat model without exposing sensitive data. Your deployments improve global intelligence; global intelligence improves your deployments.",
+    "cta_url": "/contact/",
+    "cta_text": "See It in Action"
+  },
+  {
+    "id": "ai-update-generator",
+    "title": "AI Update Generator",
+    "description": "Generative AI creates new heuristics from incident data. We simulate threat evolutions in sandboxed environments and use reinforcement learning to train countermeasures. When a novel attack pattern emerges, our system generates candidate defenses, validates them, and deploys—often within hours of first detection.",
+    "cta_url": "/contact/",
+    "cta_text": "See It in Action"
+  },
+  {
+    "id": "response-containment",
+    "title": "Response and Containment",
+    "description": "SOAR (Security Orchestration, Automation, and Response) integration means AegisAI plugs into your existing ticketing, SIEM, and incident management stack. Pre-built playbooks handle isolation, process termination, and rollback. Custom playbooks let you define escalation paths and approval workflows for your environment.",
+    "cta_url": "/contact/",
+    "cta_text": "See It in Action"
+  },
+  {
+    "id": "ui-reporting",
+    "title": "UI / Reporting",
+    "description": "A unified dashboard with real-time visualizations: threat heatmaps, propagation graphs, confidence scores over time, and compliance reports. Drill down from high-level trends to individual events. Export data for audits or integrate with BI tools via API.",
+    "cta_url": "/contact/",
+    "cta_text": "See It in Action"
+  }
+]
